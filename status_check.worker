@@ -1,0 +1,5 @@
+runtime "node"
+
+exec "app.js"
+dir "node_modules"
+dir "."
