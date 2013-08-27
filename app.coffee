@@ -29,10 +29,8 @@ createStatusEntry = (user) ->
 		status: user.status
 
 	return statusCheck
-	
-userListPromise = getUserList()
 
-userListPromise.then (users) ->
+getUserList().then (users) ->
 	return parseUserList users
 .then (users) ->
 	statusCheck = new StatusCheck
@@ -41,9 +39,9 @@ userListPromise.then (users) ->
 	statusCheck.save (err) ->
 		unless err
 			console.log "Status check successfully recorded"
+			return true
 		else
 			console.log "Status check failed:"
 			console.log err
 
-		mongoose.disconnect()
 	return
