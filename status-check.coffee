@@ -5,8 +5,10 @@ statusCheckSchema = new mongoose.Schema
 			type:		Date
 			default:	Date.now
 
-	userId:				String
-	status:				String
+	users: [{
+		userId:			String
+		status:			String
+	}]
 
 StatusCheck = mongoose.model 'StatusCheck', statusCheckSchema
 
