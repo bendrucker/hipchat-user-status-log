@@ -39,9 +39,8 @@ getUserList().then (users) ->
 	statusCheck.save (err) ->
 		unless err
 			console.log "Status check successfully recorded"
-			return true
 		else
 			console.log "Status check failed:"
 			console.log err
-
+		mongoose.disconnect()
 	return
