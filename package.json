@@ -3,9 +3,9 @@
   "description": "A tool for periodicially recording the status of users in a HipChat group.",
   "private": true,
   "dependencies": {
-    "coffee-script": "~1.6.3",
-    "request": "~2.27.0",
-    "q": "~0.9.6",
-    "mongoose": "~3.6.18"
+    "coffee-script": "~1.12.7",
+    "request": "~2.88.0",
+    "q": "~1.5.1",
+    "mongoose": "~5.3.12"
   }
 }
